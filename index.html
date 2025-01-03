@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mini_project_1.css">
+</head>
+<body>
+    <div class="Wrapper">
+        <h1>Password Generater</h1>
+
+        <div class="display-container">
+            <input readonly placeholder="Password" class="display" data-passworDisplay>
+            <button class="copyBtn"  data-copy>
+                <span class="tooltip" data-copyMsg>Copied!</span>
+
+                <img src="assets/copy.svg" alt="" width="23" height="23">
+            </button>
+        </div>
+
+        <div class="input-container">
+
+            <div class="length-container">
+                <p>Password Length</p>
+                <p id="dataLengthNumber">0</p>
+            </div>
+
+                <input type="range" min="1" max="20" class="slider" step="1" id="dataLengthSlider"> 
+                
+                <div class="check">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Includes Uppercase letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Includes Lowercase letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="numbers">
+                    <label for="uppercase">Includes Numbers</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="symbols">
+                    <label for="uppercase">Includes Symbols</label>
+                </div>
+
+                <div class="strength-container" >
+                    <p>Strength</p>
+                    <div id="indicator"></div>
+                </div>
+
+                <button class="Generate-button"> Generate Password</button>
+        </div>
+    </div>
+    <script src="mini_project_1.js"></script>
+</body>
+</html>
